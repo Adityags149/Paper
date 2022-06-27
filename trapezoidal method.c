@@ -1,6 +1,8 @@
 #include<stdio.h>
 float findValueAt(float x)
-{ return x*x*x ; }
+{
+    return x*x*x ;
+}
 int main()
 {
     int n;
@@ -11,7 +13,8 @@ int main()
     scanf("%d",&n);
     h=(b-a)/n;
     sum = findValueAt(a) +findValueAt(b);
-    for(i=a+h;i<b;i=i+h)
-       sum = sum + 2*findValueAt(i);
+    for(i=a+h; i<b; i=i+h)
+        sum = sum + 2*findValueAt(i);
     sum = (h * sum)/2;
-    printf("\nValue of The integral  = %f",sum);}
+    printf("\nValue of The integral  = %f",sum);
+}
